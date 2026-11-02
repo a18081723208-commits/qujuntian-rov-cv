@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/**
+!data/README.md
+weights/**
+!weights/.gitkeep
+outputs/**
+!outputs/.gitkeep
+*.pth
+*.pt

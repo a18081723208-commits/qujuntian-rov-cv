@@ -1,0 +1,8 @@
+# Python 3.10 or 3.11 recommended. Install a matching torch/torchvision pair.
+# For GPU, install the pair appropriate for your CUDA driver first (see read.md).
+torch>=2.2,<3.0
+torchvision>=0.17,<1.0
+numpy>=1.24,<3.0
+Pillow>=10.0,<13.0
+PyYAML>=6.0,<7.0
+tqdm>=4.66,<5.0

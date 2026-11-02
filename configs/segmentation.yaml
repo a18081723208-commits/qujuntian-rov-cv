@@ -1,0 +1,22 @@
+task: segmentation
+seed: 42
+device: auto
+data:
+  train_images: data/segmentation/train/images
+  train_masks: data/segmentation/train/masks
+  val_images: data/segmentation/val/images
+  val_masks: data/segmentation/val/masks
+model:
+  name: unet_small
+  # [height, width]; must be multiples of 4.
+  image_size: [512, 512]
+  base_channels: 32
+train:
+  epochs: 80
+  batch_size: 4
+  workers: 0
+  lr: 0.0001
+  weight_decay: 0.0001
+  output_dir: weights/segmentation
+inference:
+  mask_threshold: 0.5

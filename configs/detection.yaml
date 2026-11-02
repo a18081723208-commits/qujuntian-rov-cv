@@ -1,0 +1,23 @@
+task: detection
+seed: 42
+device: auto
+data:
+  train_images: data/detection/train/images
+  train_annotations: data/detection/train/annotations.json
+  val_images: data/detection/val/images
+  val_annotations: data/detection/val/annotations.json
+model:
+  name: fasterrcnn_resnet50_fpn
+  # Index 0 is background. COCO category IDs are mapped by matching names.
+  classes: [background, crack, spalling, exposed_rebar, corrosion]
+  min_size: 640
+  max_size: 1024
+train:
+  epochs: 50
+  batch_size: 2
+  workers: 0
+  lr: 0.0001
+  weight_decay: 0.0001
+  output_dir: weights/detection
+inference:
+  score_threshold: 0.5
